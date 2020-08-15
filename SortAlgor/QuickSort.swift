@@ -8,34 +8,22 @@
 
 import Foundation
 
-class QuickSort<T:Comparable>:CustomStringConvertible {
-    var description: String{
-        var r = ""
-        for i in 0..<array.count {
-            r.append("\(array[i])_")
-        }
-        return r
-    }
+class QuickSort<T:Comparable>:DFSort<T> {
     
-    var array:[T] = []
-    
-    init(withArray array:[T]) {
+    init(withArray array:inout [T]) {
+        super.init()
         self.array = array
-        var count = array.count
-        var b = 0
-        sort(begin: &b, end: &count)
+        quickSort(begin: 0, end: array.count)
+        array = self.array
     }
     
-    func sort(begin:inout Int,end:inout Int){
+    func quickSort(begin: Int,end: Int){
         
-        guard end - begin > 2 else { return }
+        guard end - begin > 1 else { return }
         
-        var mid = pivotIndex(begin: &begin, end: &end)
-        var midAddone = mid + 1
-        
-        sort(begin: &begin, end: &mid)
-        sort(begin: &midAddone, end: &end)
-        
+        let middle = pivotIndex(begin: begin, end: end)
+        quickSort(begin: begin, end: middle)
+        quickSort(begin: middle + 1, end: end)
     }
     
     
@@ -44,28 +32,26 @@ class QuickSort<T:Comparable>:CustomStringConvertible {
     ///   - begin: <#begin description#>
     ///   - end: <#end description#>
     /// - Returns: 轴点元素的最终位置
-    func pivotIndex(begin:inout Int,end:inout Int) -> Int {
-//        let randomBegin = Int(arc4random() % UInt32(end - begin))
-//        swap(i1: &array[begin], i2: &array[randomBegin])
-        end -= 1
-        // 备份轴心值
+    func pivotIndex(begin b:Int,end e:Int) -> Int {
+        var begin = b
+        var end = e
+        let randomBegin = Int(arc4random() % UInt32(end - begin))
+        swap(begin: begin, target: begin + randomBegin)
+        // pivot: 轴点元素
         let pivot = array[begin]
-        
+        end -= 1
         while begin < end {
-            // 从右向左遍历对比
             while begin < end {
-                if pivot < array[end]{
+                if pivot < array[end] {
                     end -= 1
                 }else{
-                    array[end] = array[begin]
+                    array[begin] = array[end]
                     begin += 1
                     break
                 }
             }
-            
             while begin < end {
-                // 从左向右遍历对比
-                if array[begin] < pivot {
+                if pivot > array[begin] {
                     begin += 1
                 }else{
                     array[end] = array[begin]
@@ -74,16 +60,13 @@ class QuickSort<T:Comparable>:CustomStringConvertible {
                 }
             }
         }
-        
         array[begin] = pivot
-        
         return begin
     }
     
-    func swap( i1:inout T, i2:inout T) {
-        let temp = i1
-        i1 = i2
-        i2 = temp
+    private func swap(begin:Int,target:Int){
+        let temp = array[begin]
+        array[begin] = array[target]
+        array[target] = temp
     }
-    
 }

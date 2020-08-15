@@ -19,6 +19,8 @@
 		FE11F6D824DD56D100969A14 /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F6D524DD56D100969A14 /* BubbleSort.swift */; };
 		FE11F6DA24DD97F200969A14 /* SelectionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F6D924DD97F200969A14 /* SelectionSort.swift */; };
 		FE11F6DC24DEEE8C00969A14 /* HeapSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F6DB24DEEE8C00969A14 /* HeapSort.swift */; };
+		FE9FED6024E3D4D700173EEC /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9FED5F24E3D4D700173EEC /* InsertionSort.swift */; };
+		FE9FED6224E4537700173EEC /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9FED6124E4537700173EEC /* MergeSort.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		FE11F6D524DD56D100969A14 /* BubbleSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
 		FE11F6D924DD97F200969A14 /* SelectionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSort.swift; sourceTree = "<group>"; };
 		FE11F6DB24DEEE8C00969A14 /* HeapSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapSort.swift; sourceTree = "<group>"; };
+		FE9FED5F24E3D4D700173EEC /* InsertionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
+		FE9FED6124E4537700173EEC /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 				FE11F6D524DD56D100969A14 /* BubbleSort.swift */,
 				FE11F6D924DD97F200969A14 /* SelectionSort.swift */,
 				FE11F6DB24DEEE8C00969A14 /* HeapSort.swift */,
+				FE9FED5F24E3D4D700173EEC /* InsertionSort.swift */,
+				FE9FED6124E4537700173EEC /* MergeSort.swift */,
 				FE11F6D424DD56D100969A14 /* DFSort.swift */,
 				FE11F6D324DD56D100969A14 /* QuickSort.swift */,
 				FE11F6B724DD56B600969A14 /* Main.storyboard */,
@@ -215,9 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE9FED6024E3D4D700173EEC /* InsertionSort.swift in Sources */,
 				FE11F6D724DD56D100969A14 /* DFSort.swift in Sources */,
 				FE11F6B624DD56B600969A14 /* ViewController.swift in Sources */,
 				FE11F6DA24DD97F200969A14 /* SelectionSort.swift in Sources */,
+				FE9FED6224E4537700173EEC /* MergeSort.swift in Sources */,
 				FE11F6B224DD56B600969A14 /* AppDelegate.swift in Sources */,
 				FE11F6B424DD56B600969A14 /* SceneDelegate.swift in Sources */,
 				FE11F6D624DD56D100969A14 /* QuickSort.swift in Sources */,
