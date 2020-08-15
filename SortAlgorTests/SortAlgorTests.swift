@@ -116,6 +116,16 @@ class SortAlgorTests: XCTestCase {
         isAscOrder(array)
     }
     
+    func testShellSort() throws {
+        var array:[Int] = []
+        for _ in 0..<3000 {
+            array.append(Int(arc4random()%UInt32(10000)))
+        }
+        
+        let _ = ShellSort(&array)
+        isAscOrder(array)
+    }
+    
     func isAscOrder<T:Comparable>(_ array:[T])  {
         guard array.count > 0 else {
             return
