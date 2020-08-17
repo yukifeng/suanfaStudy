@@ -22,6 +22,7 @@
 		FE9FED6024E3D4D700173EEC /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9FED5F24E3D4D700173EEC /* InsertionSort.swift */; };
 		FE9FED6224E4537700173EEC /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9FED6124E4537700173EEC /* MergeSort.swift */; };
 		FE9FED6424E7D8F000173EEC /* ShellSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9FED6324E7D8F000173EEC /* ShellSort.swift */; };
+		FE9FED6624EA7A3900173EEC /* CountSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9FED6524EA7A3900173EEC /* CountSort.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		FE9FED5F24E3D4D700173EEC /* InsertionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
 		FE9FED6124E4537700173EEC /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
 		FE9FED6324E7D8F000173EEC /* ShellSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellSort.swift; sourceTree = "<group>"; };
+		FE9FED6524EA7A3900173EEC /* CountSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountSort.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				FE11F6D424DD56D100969A14 /* DFSort.swift */,
 				FE11F6D324DD56D100969A14 /* QuickSort.swift */,
 				FE9FED6324E7D8F000173EEC /* ShellSort.swift */,
+				FE9FED6524EA7A3900173EEC /* CountSort.swift */,
 				FE11F6B724DD56B600969A14 /* Main.storyboard */,
 				FE11F6BA24DD56B900969A14 /* Assets.xcassets */,
 				FE11F6BC24DD56B900969A14 /* LaunchScreen.storyboard */,
@@ -231,6 +234,7 @@
 				FE9FED6224E4537700173EEC /* MergeSort.swift in Sources */,
 				FE11F6B224DD56B600969A14 /* AppDelegate.swift in Sources */,
 				FE9FED6424E7D8F000173EEC /* ShellSort.swift in Sources */,
+				FE9FED6624EA7A3900173EEC /* CountSort.swift in Sources */,
 				FE11F6B424DD56B600969A14 /* SceneDelegate.swift in Sources */,
 				FE11F6D624DD56D100969A14 /* QuickSort.swift in Sources */,
 				FE11F6D824DD56D100969A14 /* BubbleSort.swift in Sources */,

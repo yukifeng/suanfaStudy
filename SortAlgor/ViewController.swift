@@ -14,12 +14,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         var array:[Int] = []
-        for _ in 0..<20 {
-            array.append(Int(arc4random()%UInt32(100)))
+        for _ in 0..<10 {
+            array.append(Int(arc4random()%UInt32(10)))
         }
         
         print(array)
-        _ = ShellSort(&array)
+        _ = CountSort(&array)
         
         print("------")
         print(array)
