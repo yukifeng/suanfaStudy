@@ -69,6 +69,7 @@ class SortAlgorTests: XCTestCase {
         isAscOrder(sort.array)
     }
     
+    
     func testHeapSort() throws {
         var array:[Int] = []
         for _ in 0..<3000 {

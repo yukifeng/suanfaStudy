@@ -35,13 +35,6 @@ class SelectionSort<T:Comparable>: DFSort<T> {
             swapCount += 1
         }
     }
-    
-    func isStable() -> Bool {
-        
-        students.bubbleSort()
-        
-        return super.studentSortAfter()
-    }
 }
 
 extension Array where Element:Comparable{
