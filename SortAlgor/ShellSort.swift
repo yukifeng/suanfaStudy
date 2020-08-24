@@ -25,9 +25,11 @@ class ShellSort<E:Comparable>: DFSort<E> {
     /// - Parameter step: 步长
     private func shellSort(step:Int){
         for col in 0..<step {
+            // 每列第一个元素
             var begin = col + step
             while begin < array.count {
                 var cur = begin
+                // 当前元素与矩阵前一个元素比较
                 while cur > col && array[cur] < array[cur - step] {
                     let temp = array[cur]
                     array[cur] = array[cur - step]

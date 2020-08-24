@@ -49,39 +49,39 @@ class HeapSort<T:Comparable>: DFSort<T> {
         }
     }
         
-        /// 让index位置的元素下滤
-        /// - Parameter index: <#index description#>
-        private func siftDown(indexShape:Int){
-            var index = indexShape
-            let element = elements[index]
-            let half = size >> 1
-            // 第一个叶子节点的索引 == 非叶子节点的数量
-            // index < 第一个叶子节点的索引
-            // 必须保证index位置是非叶子节点
-            while index < half {
-                // index的节点有2种情况
-                // 1.只有左子节点
-                // 2.同时有左右子节点
-                
-                // 左子节点
-                var leftChildIndex = (index << 1) + 1
-                var leftChild = elements[leftChildIndex]
-                // 右子节点
-                let rightChildIndex = (index << 1) + 2
-                // 默认左子节点与父节点进行比较
-                if rightChildIndex < size && elements[rightChildIndex] > elements[leftChildIndex] {
-                    leftChild = elements[rightChildIndex]
-                    leftChildIndex = rightChildIndex
-                }
-                if element > leftChild {
-                    break
-                }
-                // 将子节点存放到index位置
-                elements[index] = leftChild
-                // 重新设置index
-                index = leftChildIndex
+    /// 让index位置的元素下滤
+    /// - Parameter index: <#index description#>
+    private func siftDown(indexShape:Int){
+        var index = indexShape
+        let element = elements[index]
+        let half = size >> 1
+        // 第一个叶子节点的索引 == 非叶子节点的数量
+        // index < 第一个叶子节点的索引
+        // 必须保证index位置是非叶子节点
+        while index < half {
+            // index的节点有2种情况
+            // 1.只有左子节点
+            // 2.同时有左右子节点
+            
+            // 左子节点
+            var leftChildIndex = (index << 1) + 1
+            var leftChild = elements[leftChildIndex]
+            // 右子节点
+            let rightChildIndex = (index << 1) + 2
+            // 默认左子节点与父节点进行比较
+            if rightChildIndex < size && elements[rightChildIndex] > elements[leftChildIndex] {
+                leftChild = elements[rightChildIndex]
+                leftChildIndex = rightChildIndex
             }
-            elements[index] = element
+            if element > leftChild {
+                break
+            }
+            // 将子节点存放到index位置
+            elements[index] = leftChild
+            // 重新设置index
+            index = leftChildIndex
         }
+        elements[index] = element
+    }
     
 }
